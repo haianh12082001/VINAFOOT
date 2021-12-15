@@ -1,0 +1,161 @@
+.header {
+    background: #149554;
+    position: sticky !important;
+    z-index: 99;
+    top: 0;
+    .logo-pc {
+        img {
+            width: 53px;
+            height: 53px;
+            object-fit: cover;
+        }
+    }
+    .logo-mobi {
+        display: none;
+    }
+    .menu-list {
+        display: flex;
+        justify-content: space-between;
+        padding: 18px 0;
+        a {
+            color: #a6ce39;
+            font-size: 16px;
+            line-height: 19.5px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+        li {
+            position: relative;
+            &::before {
+                content: "";
+                position: absolute;
+                height: 25px;
+                width: 100%;
+                bottom: -20px;
+            }
+            &:hover .sub-menu {
+                transform: scale(1);
+            }
+        }
+    }
+    .sub-menu {
+        position: absolute;
+        min-width: 200px;
+        background: #149554;
+        top: 40px;
+        padding: 0 20px;
+        transform: scale(0);
+        transition: transform 0.8s ease;
+        transform-origin: top left;
+        z-index: 3;
+        box-shadow: rgb(0 0 0 / 15%) 1.95px 1.95px 2.6px;
+        li {
+            padding: 15px 0;
+            border-bottom: 1px solid #ccc;
+            &:last-child {
+                border: none;
+            }
+        }
+    }
+    .icon-mobi {
+        display: none;
+    }
+    .hotline {
+        margin: 8px 0;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 22px;
+        color: $color-white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 6px 36px;
+        background: linear-gradient(90deg, #fed026 0%, #ed6238 100%);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 100px;
+        border: 2px solid #ffefc7;
+    }
+    .language {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    select {
+        background: #149554;
+        border: none;
+        color: $color-white;
+    }
+    .americas {
+        color: $color-white;
+    }
+    @include maxWidth(1100px) {
+        .hotline {
+            padding: 0 20px;
+        }
+    }
+    @include maxWidth(768px) {
+        position: relative;
+        // height: 70px;
+        .logo-pc {
+            display: none;
+        }
+        .logo-mobi {
+            display: block;
+            padding-left: 20px;
+            img {
+                width: 70px;
+                height: 70px;
+                object-fit: cover;
+            }
+        }
+        .hotline-language {
+            display: none;
+        }
+        .menu {
+            font-size: 16px;
+            position: absolute;
+            display: block;
+            z-index: 99;
+            left: 0;
+            top: 70px;
+            background: $color-white;
+            max-width: 450px;
+            height: 100vh;
+            box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+            transition: transform 0.8s ease;
+            background: #149554;
+        }
+        .menu-list {
+            display: block;
+            li {
+                padding: 10px 0;
+            }
+        }
+        .sub-menu {
+            position: relative;
+            visibility: visible;
+            left: 0;
+            top: 0;
+            padding-left: 16px;
+            border-left: 2px solid #a6ce39;
+            width: 100%;
+            transform: scale(1);
+            box-shadow: none;
+            li {
+                border: none;
+            }
+        }
+        .icon-mobi {
+            display: block;
+            margin-right: 20px;
+            i {
+                margin-left: 20px;
+                font-size: 24px;
+                color: $color-white;
+            }
+        }
+        // .hotline {
+        //     display: none;
+        // }
+    }
+}

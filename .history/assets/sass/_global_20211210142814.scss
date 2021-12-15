@@ -1,0 +1,16 @@
+.container {
+    max-width: 1230px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+body {
+    font-family: $font-family;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-size: 16px;
+    color: $text-color;
+    @include maxWidth(480px) {
+        font-size: 14px;
+    }
+}

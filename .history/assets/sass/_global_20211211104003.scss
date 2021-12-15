@@ -1,0 +1,45 @@
+@font-face {
+    font-family: "UTM";
+    font-display: swap;
+    src: url("../fonts/word/UTM\ HelvetIns.ttf") format("truetype");
+}
+
+.container {
+    max-width: 1230px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-size: 16px;
+    color: $color-black;
+}
+
+.heading-gradient {
+    background-image: linear-gradient(to bottom, #116118, #afce4a);
+    background-size: 100%;
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+}
+.section-content {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.section-heading {
+    text-align: center;
+    text-transform: uppercase;
+    .big {
+        color: #f99332;
+        font-size: 48px;
+        display: inline-block;
+    }
+    span {
+        font-size: 30px;
+        font-weight: 700;
+    }
+}

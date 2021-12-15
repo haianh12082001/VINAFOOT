@@ -1,0 +1,109 @@
+@font-face {
+    font-family: "UTM";
+    font-display: swap;
+    src: url("../fonts/word/UTM\ HelvetIns.ttf") format("truetype");
+}
+
+.container {
+    max-width: 1230px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-size: 16px;
+    color: $color-black;
+    font-family: "Montserrat";
+    @include maxWidth(768px) {
+        font-size: 14px;
+    }
+}
+
+.heading-gradient {
+    background-image: linear-gradient(to bottom, #116118, #afce4a);
+    background-size: 100%;
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+}
+.section-content {
+    max-width: 1130px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.section-title {
+    text-align: center;
+    text-transform: uppercase;
+    .big {
+        color: #f99332;
+        font-size: 48px;
+        display: inline-block;
+        font-weight: 600;
+    }
+    span {
+        font-size: 30px;
+        font-weight: 700;
+    }
+    p {
+        color: #484848;
+        font-size: 18px;
+        font-weight: 500;
+    }
+}
+.section-sub-title {
+    padding: 0 167px;
+    text-align: center;
+    position: relative;
+    @include maxWidth(1023px) {
+    }
+}
+.icon-sub-title {
+    position: relative;
+    img {
+        width: 46px;
+        height: 43px;
+        object-fit: cover;
+    }
+    &::after,
+    &::before {
+        content: "";
+        position: absolute;
+        width: 122px;
+        height: 2px;
+        background: #e0eddd;
+        top: 50%;
+    }
+    &::before {
+        left: 30%;
+    }
+    &::after {
+        right: 30%;
+    }
+}
+.truncate-h {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-word;
+}
+
+.scale {
+    animation: shine 3s infinite;
+}
+
+@keyframes shine {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}

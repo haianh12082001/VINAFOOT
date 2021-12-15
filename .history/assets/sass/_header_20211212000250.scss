@@ -1,0 +1,76 @@
+.header {
+    background: #149554;
+    &-logo-pc {
+        width: 53px;
+        height: 53px;
+        object-fit: cover;
+        // padding-top: 6px;
+    }
+    &-logo-mobi {
+        display: none;
+    }
+    ul {
+        display: flex;
+        justify-content: space-between;
+        padding: 18px 0;
+        a {
+            color: #a6ce39;
+            font-size: 16px;
+            line-height: 19.5px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+    }
+    .icon-bar {
+        display: none;
+    }
+    .hotline {
+        margin: 8px 0;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 22px;
+        color: $color-white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 8px 36px;
+        background: linear-gradient(90deg, #fed026 0%, #ed6238 100%);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 100px;
+        border: 2px solid #ffefc7;
+    }
+    .language {
+        padding: 15px 0;
+    }
+    select {
+        background: #149554;
+        border: none;
+        color: $color-white;
+    }
+    .americas {
+        color: $color-white;
+    }
+    @include maxWidth(1100px) {
+        .hotline {
+            padding: 0 20px;
+        }
+    }
+    @include maxWidth(768px) {
+        &-logo-pc {
+            display: none;
+        }
+        .menu {
+            position: absolute;
+            display: none;
+        }
+        ul {
+            display: block;
+        }
+        .icon-bar {
+            display: block;
+        }
+        .hotline {
+            display: none;
+        }
+    }
+}

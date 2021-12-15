@@ -1,0 +1,145 @@
+@font-face {
+    font-family: "UTM";
+    font-display: swap;
+    src: url("../fonts/word/UTM\ HelvetIns.ttf") format("truetype");
+}
+
+.container {
+    max-width: 1230px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-size: 16px;
+    color: $color-black;
+    font-family: "Montserrat";
+    @include maxWidth(768px) {
+        font-size: 14px;
+    }
+}
+
+.heading-gradient {
+    background-image: linear-gradient(to bottom, #116118, #afce4a);
+    background-size: 100%;
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+}
+.heading {
+    font-weight: 800;
+    font-size: 36px;
+    text-align: center;
+    @include maxWidth(768px) {
+        font-size: 30px;
+    }
+    @include maxWidth(576px) {
+        font-size: 24px;
+    }
+}
+.sub-heading {
+    font-size: 24px;
+    font-weight: 700;
+    color: $dark;
+    text-transform: uppercase;
+    text-align: center;
+    @include maxWidth(576px) {
+        font-size: 16px;
+    }
+}
+.section-content {
+    max-width: 1130px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.section-title {
+    text-align: center;
+    text-transform: uppercase;
+    .big {
+        color: #f99332;
+        font-size: 48px;
+        display: inline-block;
+        font-weight: 600;
+    }
+    span {
+        font-size: 30px;
+        font-weight: 700;
+    }
+    p {
+        color: $dark;
+        font-size: 18px;
+        font-weight: 500;
+    }
+    @include maxWidth(768px) {
+        .big {
+            font-size: 36px;
+        }
+    }
+}
+.section-sub-title {
+    padding: 0 167px;
+    text-align: center;
+    position: relative;
+    @include maxWidth(1023px) {
+        padding: 0;
+    }
+}
+.icon-sub-title {
+    position: relative;
+    img {
+        width: 46px;
+        height: 43px;
+        object-fit: cover;
+    }
+    &::after,
+    &::before {
+        content: "";
+        position: absolute;
+        width: 122px;
+        height: 2px;
+        background: #e0eddd;
+        top: 50%;
+    }
+    &::before {
+        left: 30%;
+    }
+    &::after {
+        right: 30%;
+    }
+}
+.truncate-h {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-word;
+}
+.ladi-headline {
+    background: linear-gradient(90deg, #fed026 0%, #ed6238 100%);
+    line-height: 22px;
+    color: #fff;
+    text-transform: uppercase;
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    border-radius: 100px;
+    border: 2px solid #ffefc7;
+    font-size: 18px;
+    animation: shine 3s infinite;
+    font-weight: 700;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    padding: 6px 36px;
+}
+.btn-form {
+    width: 100%;
+    padding: 11px;
+    background: #ffc208;
+    color: #149554;
+    text-transform: uppercase;
+    font-weight: 600;
+    border: none;
+}
