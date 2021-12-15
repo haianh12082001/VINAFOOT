@@ -1258,7 +1258,7 @@
     }
     @include maxWidth(768px) {
         .price {
-            font-size: 32px;
+            font-size: 30px;
         }
         .slides {
             img {
@@ -1266,7 +1266,7 @@
             }
         }
     }
-    @include maxWidth(576px) {
+    @include maxWidth(525px) {
         .title {
             font-size: 24px;
         }
@@ -1277,9 +1277,6 @@
             img {
                 height: 300px;
             }
-        }
-        .price {
-            font-size: 30px;
         }
     }
 }
@@ -1311,6 +1308,7 @@
     .product-price {
         font-size: 24px;
     }
+
     @include maxWidth(768px) {
         .title {
             font-size: 20px;
@@ -1401,14 +1399,6 @@
             }
         }
     }
-}
-.btn-order {
-    padding: 12px 37px 10px;
-    font-size: 18px;
-    font-weight: 700;
-    background: #149554;
-    border-radius: 100px;
-    color: $color-white;
 }
 .news-detail {
     .article-title {

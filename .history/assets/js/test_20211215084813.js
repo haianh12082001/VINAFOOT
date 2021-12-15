@@ -4,7 +4,7 @@ var x = str.innerHTML
 console.log(str)
 for (var i = 0; i < x.length; i++) {
     console.log(x.charAt(i));
-    // str.innerText = "<i></>"
+    str.innerText = "<i></>"
 }
 
 // str.innerHTML = "<i>Hello</i>"

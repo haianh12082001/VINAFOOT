@@ -1635,15 +1635,8 @@ body {
   color: #0e9153;
 }
 .product-detail .price {
-  margin-bottom: 50px;
-}
-.product-detail .price b {
-  font-size: 16px;
-}
-.product-detail .price .number {
   font-size: 36px;
   font-weight: 700;
-  margin-left: 24px;
 }
 .product-detail .title {
   font-weight: 600;
@@ -1656,11 +1649,14 @@ body {
   border-bottom: #dbdbdb;
 }
 @media screen and (max-width: 768px) {
+  .product-detail .price {
+    font-size: 32px;
+  }
   .product-detail .slides img {
     height: 500px;
   }
 }
-@media screen and (max-width: 525px) {
+@media screen and (max-width: 576px) {
   .product-detail .title {
     font-size: 24px;
   }
@@ -1669,6 +1665,9 @@ body {
   }
   .product-detail .slides img {
     height: 300px;
+  }
+  .product-detail .price {
+    font-size: 30px;
   }
 }
 
@@ -1787,6 +1786,15 @@ body {
   }
 }
 
+.btn-order {
+  padding: 12px 37px 10px;
+  font-size: 18px;
+  font-weight: 700;
+  background: #149554;
+  border-radius: 100px;
+  color: #fff;
+}
+
 .news-detail .article-title {
   font-size: 32px;
   font-family: "Roboto", sans-serif;
@@ -1808,13 +1816,13 @@ body {
   border-radius: 8px;
   font-family: "Roboto", sans-serif;
 }
-.news-detail .content-detail {
+.news-detail .body-content {
   font-family: "Roboto", sans-serif;
 }
-.news-detail .content-detail h2 {
+.news-detail .body-content h2 {
   font-size: 1.25rem;
 }
-.news-detail .content-detail p {
+.news-detail .body-content p {
   text-align: justify;
 }
 .news-detail .title-md {

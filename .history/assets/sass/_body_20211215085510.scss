@@ -1243,8 +1243,15 @@
         }
     }
     .price {
-        font-size: 36px;
-        font-weight: 700;
+        margin-bottom: 50px;
+        b {
+            font-size: 16px;
+        }
+        .number {
+            font-size: 36px;
+            font-weight: 700;
+            margin-left: 24px;
+        }
     }
     .title {
         font-weight: 600;
@@ -1257,16 +1264,13 @@
         border-bottom: #dbdbdb;
     }
     @include maxWidth(768px) {
-        .price {
-            font-size: 32px;
-        }
         .slides {
             img {
                 height: 500px;
             }
         }
     }
-    @include maxWidth(576px) {
+    @include maxWidth(525px) {
         .title {
             font-size: 24px;
         }
@@ -1277,9 +1281,6 @@
             img {
                 height: 300px;
             }
-        }
-        .price {
-            font-size: 30px;
         }
     }
 }
@@ -1311,6 +1312,7 @@
     .product-price {
         font-size: 24px;
     }
+
     @include maxWidth(768px) {
         .title {
             font-size: 20px;
@@ -1401,14 +1403,6 @@
             }
         }
     }
-}
-.btn-order {
-    padding: 12px 37px 10px;
-    font-size: 18px;
-    font-weight: 700;
-    background: #149554;
-    border-radius: 100px;
-    color: $color-white;
 }
 .news-detail {
     .article-title {
